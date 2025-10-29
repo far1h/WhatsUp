@@ -19,9 +19,20 @@ struct SignUpView: View {
         return !email.isEmptyOrWhiteSpace && !password.isEmptyOrWhiteSpace && !displayName.isEmptyOrWhiteSpace
     }
     
+    private func updateDisplayName(user: User) async {
+        let changeRequest = user.createProfileChangeRequest()
+        changeRequest.displayName = displayName
+        do {
+            try await changeRequest.commitChanges()
+        } catch {
+            errorMessage = error.localizedDescription
+        }
+    }
+    
     private func signUp() async {
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
+            await updateDisplayName(user: result.user)
         } catch {
             errorMessage = error.localizedDescription
         }
