@@ -22,6 +22,8 @@
 		91FAECD32EB23B0E00D9B44D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECD22EB23B0E00D9B44D /* LoginView.swift */; };
 		91FAECD52EB23D5400D9B44D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECD42EB23D5400D9B44D /* MainView.swift */; };
 		91FAECD72EB23E4500D9B44D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECD62EB23E4500D9B44D /* AppState.swift */; };
+		91FAECD92EB2424700D9B44D /* GroupListContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECD82EB2424700D9B44D /* GroupListContainerView.swift */; };
+		91FAECDB2EB2434100D9B44D /* AddNewGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECDA2EB2434100D9B44D /* AddNewGroupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		91FAECD22EB23B0E00D9B44D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		91FAECD42EB23D5400D9B44D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		91FAECD62EB23E4500D9B44D /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		91FAECD82EB2424700D9B44D /* GroupListContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListContainerView.swift; sourceTree = "<group>"; };
+		91FAECDA2EB2434100D9B44D /* AddNewGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGroupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 				91FAECCA2EB2348300D9B44D /* SignUpView.swift */,
 				91FAECD22EB23B0E00D9B44D /* LoginView.swift */,
 				91FAECD42EB23D5400D9B44D /* MainView.swift */,
+				91FAECD82EB2424700D9B44D /* GroupListContainerView.swift */,
+				91FAECDA2EB2434100D9B44D /* AddNewGroupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,11 +210,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				91FAECD32EB23B0E00D9B44D /* LoginView.swift in Sources */,
+				91FAECDB2EB2434100D9B44D /* AddNewGroupView.swift in Sources */,
 				91FAECD52EB23D5400D9B44D /* MainView.swift in Sources */,
 				91FAECD12EB239BE00D9B44D /* Model.swift in Sources */,
 				91FAECD72EB23E4500D9B44D /* AppState.swift in Sources */,
 				91FAECCE2EB2356900D9B44D /* String+Extensions.swift in Sources */,
 				916F2E9C2EB1AD2A008F60F1 /* ContentView.swift in Sources */,
+				91FAECD92EB2424700D9B44D /* GroupListContainerView.swift in Sources */,
 				91FAECCB2EB2348300D9B44D /* SignUpView.swift in Sources */,
 				916F2E9A2EB1AD2A008F60F1 /* WhatsUpApp.swift in Sources */,
 			);
