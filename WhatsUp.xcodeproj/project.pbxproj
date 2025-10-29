@@ -16,6 +16,8 @@
 		916F2EAD2EB1B30C008F60F1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 916F2EAC2EB1B30C008F60F1 /* FirebaseFirestore */; };
 		916F2EAF2EB1B30C008F60F1 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 916F2EAE2EB1B30C008F60F1 /* FirebaseFirestoreSwift */; };
 		916F2EB12EB1B30C008F60F1 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 916F2EB02EB1B30C008F60F1 /* FirebaseStorage */; };
+		91FAECCB2EB2348300D9B44D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECCA2EB2348300D9B44D /* SignUpView.swift */; };
+		91FAECCE2EB2356900D9B44D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECCD2EB2356900D9B44D /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		916F2E9D2EB1AD2B008F60F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		916F2EA02EB1AD2B008F60F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		91FAECC82EB233BF00D9B44D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		91FAECCA2EB2348300D9B44D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		91FAECCD2EB2356900D9B44D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 		916F2E982EB1AD2A008F60F1 /* WhatsUp */ = {
 			isa = PBXGroup;
 			children = (
+				91FAECCC2EB2355E00D9B44D /* Extensions */,
+				91FAECC92EB2347800D9B44D /* Views */,
 				916F2E992EB1AD2A008F60F1 /* WhatsUpApp.swift */,
 				910CD1362EB1C9BE009E030B /* GoogleService-Info.plist */,
 				916F2E9B2EB1AD2A008F60F1 /* ContentView.swift */,
@@ -78,6 +84,22 @@
 				916F2EA02EB1AD2B008F60F1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		91FAECC92EB2347800D9B44D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				91FAECCA2EB2348300D9B44D /* SignUpView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		91FAECCC2EB2355E00D9B44D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				91FAECCD2EB2356900D9B44D /* String+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,7 +183,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91FAECCE2EB2356900D9B44D /* String+Extensions.swift in Sources */,
 				916F2E9C2EB1AD2A008F60F1 /* ContentView.swift in Sources */,
+				91FAECCB2EB2348300D9B44D /* SignUpView.swift in Sources */,
 				916F2E9A2EB1AD2A008F60F1 /* WhatsUpApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
