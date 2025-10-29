@@ -20,6 +20,8 @@
 		91FAECCE2EB2356900D9B44D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECCD2EB2356900D9B44D /* String+Extensions.swift */; };
 		91FAECD12EB239BE00D9B44D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECD02EB239BE00D9B44D /* Model.swift */; };
 		91FAECD32EB23B0E00D9B44D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECD22EB23B0E00D9B44D /* LoginView.swift */; };
+		91FAECD52EB23D5400D9B44D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECD42EB23D5400D9B44D /* MainView.swift */; };
+		91FAECD72EB23E4500D9B44D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECD62EB23E4500D9B44D /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		91FAECCD2EB2356900D9B44D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		91FAECD02EB239BE00D9B44D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		91FAECD22EB23B0E00D9B44D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		91FAECD42EB23D5400D9B44D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		91FAECD62EB23E4500D9B44D /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 			children = (
 				91FAECCA2EB2348300D9B44D /* SignUpView.swift */,
 				91FAECD22EB23B0E00D9B44D /* LoginView.swift */,
+				91FAECD42EB23D5400D9B44D /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				91FAECD02EB239BE00D9B44D /* Model.swift */,
+				91FAECD62EB23E4500D9B44D /* AppState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,7 +204,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				91FAECD32EB23B0E00D9B44D /* LoginView.swift in Sources */,
+				91FAECD52EB23D5400D9B44D /* MainView.swift in Sources */,
 				91FAECD12EB239BE00D9B44D /* Model.swift in Sources */,
+				91FAECD72EB23E4500D9B44D /* AppState.swift in Sources */,
 				91FAECCE2EB2356900D9B44D /* String+Extensions.swift in Sources */,
 				916F2E9C2EB1AD2A008F60F1 /* ContentView.swift in Sources */,
 				91FAECCB2EB2348300D9B44D /* SignUpView.swift in Sources */,

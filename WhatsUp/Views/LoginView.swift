@@ -13,6 +13,8 @@ struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     
+    @EnvironmentObject private var appState: AppState
+    
     private var isFormValid: Bool {
         !email.isEmptyOrWhiteSpace && !password.isEmptyOrWhiteSpace
     }
@@ -20,7 +22,7 @@ struct LoginView: View {
     private func login() async {
         do {
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
-            print("Logged in user: \(result.user.email ?? "No Email")")
+            appState.routes.append(.main)
         } catch {
             print("Login error: \(error.localizedDescription)")
         }
@@ -48,7 +50,7 @@ struct LoginView: View {
                 }
                 .disabled(!isFormValid)
                 Button(action: {
-                    // Handle sign up action
+                    appState.routes.append(.signUp)
                 }) {
                     Text("Sign Up")
                         .frame(maxWidth: .infinity, alignment: .center)
@@ -61,6 +63,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView().environmentObject(AppState())
     }
 }

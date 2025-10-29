@@ -15,6 +15,7 @@ struct SignUpView: View {
     @State private var displayName: String = ""
     @State private var errorMessage: String = ""
     
+    @EnvironmentObject private var appState: AppState
     @EnvironmentObject private var model: Model
     
     private var isFormValid: Bool {
@@ -25,6 +26,7 @@ struct SignUpView: View {
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             try await model.updateDisplayName(for: result.user, to: displayName)
+            appState.routes.append(.main)
         } catch {
             errorMessage = error.localizedDescription
         }
@@ -56,7 +58,7 @@ struct SignUpView: View {
                 .disabled(!isFormValid)
                 Spacer()
                 Button(action: {
-                    // Handle log in action
+                    appState.routes.append(.login)
                 }) {
                     Text("Log In")
                         .bold()
@@ -78,5 +80,6 @@ struct SignUpView: View {
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpView().environmentObject(Model())
+            .environmentObject(AppState())
     }
 }

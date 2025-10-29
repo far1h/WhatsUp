@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseCore
+import FirebaseAuth
 
 @main
 struct WhatsUpApp: App {
@@ -14,9 +15,29 @@ struct WhatsUpApp: App {
         FirebaseApp.configure()
     }
     
+    @StateObject var appState = AppState()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack (path: $appState.routes) {
+                ZStack {
+                    if Auth.auth().currentUser != nil {
+                        MainView()
+                    } else {
+                        LoginView()
+                    }
+                }.navigationDestination(for: Route.self) { route in
+                    switch route {
+                    case .main:
+                        MainView()
+                    case .login:
+                        LoginView()
+                    case .signUp:
+                        SignUpView()
+                    }
+                }
+            }.environmentObject(appState)
+                .environmentObject(Model())
         }
     }
 }
