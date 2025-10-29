@@ -28,6 +28,7 @@
 		91FAECDF2EB250FB00D9B44D /* GroupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECDE2EB250FB00D9B44D /* GroupListView.swift */; };
 		91FAECE12EB2548F00D9B44D /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECE02EB2548F00D9B44D /* GroupDetailView.swift */; };
 		91FAECE32EB25E6900D9B44D /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECE22EB25E6900D9B44D /* ChatMessage.swift */; };
+		91FAECE52EB2649F00D9B44D /* ChatMessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECE42EB2649F00D9B44D /* ChatMessageListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		91FAECDE2EB250FB00D9B44D /* GroupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListView.swift; sourceTree = "<group>"; };
 		91FAECE02EB2548F00D9B44D /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
 		91FAECE22EB25E6900D9B44D /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		91FAECE42EB2649F00D9B44D /* ChatMessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				91FAECDA2EB2434100D9B44D /* AddNewGroupView.swift */,
 				91FAECDE2EB250FB00D9B44D /* GroupListView.swift */,
 				91FAECE02EB2548F00D9B44D /* GroupDetailView.swift */,
+				91FAECE42EB2649F00D9B44D /* ChatMessageListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91FAECDD2EB248BD00D9B44D /* Group.swift in Sources */,
+				91FAECE52EB2649F00D9B44D /* ChatMessageListView.swift in Sources */,
 				91FAECD32EB23B0E00D9B44D /* LoginView.swift in Sources */,
 				91FAECDB2EB2434100D9B44D /* AddNewGroupView.swift in Sources */,
 				91FAECD52EB23D5400D9B44D /* MainView.swift in Sources */,

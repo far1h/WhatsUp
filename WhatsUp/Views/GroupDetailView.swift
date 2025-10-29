@@ -26,6 +26,7 @@ struct GroupDetailView: View {
     
     var body: some View {
         VStack {
+            ChatMessageListView(messages: model.chatMessages)
             Spacer()
             HStack {
                 TextField("Type a message...", text: $chatText)
@@ -43,6 +44,12 @@ struct GroupDetailView: View {
                 }
             }
         }.padding()
+            .onDisappear {
+                model.detachListener()
+            }
+            .onAppear {
+                model.listenForChatMessages(in: group)
+            }
     }
 }
 

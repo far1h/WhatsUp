@@ -27,7 +27,7 @@ extension ChatMessage {
     func toDictionary() -> [String: Any] {
         return [
             "text": text,
-            "timestamp": dateCreated,
+            "dateCreated": dateCreated,
             "senderId": userId,
             "displayName": displayName
         ]
@@ -36,14 +36,16 @@ extension ChatMessage {
     static func fromSnapshot(snapshot: QueryDocumentSnapshot) -> ChatMessage? {
         let data = snapshot.data()
         guard let text = data["text"] as? String,
-              let dateCreated = data["dateCreated"] as? Date,
-                let senderId = data["senderId"] as? String,
+              let dateCreated = data["dateCreated"] as? Timestamp,
+              let senderId = data["senderId"] as? String,
               let displayName = data["displayName"] as? String else {
             return nil
         }
         
         let documentId = snapshot.documentID
+        let dateCreatedDate = dateCreated.dateValue()
+
         
-        return ChatMessage(documentId: documentId, text: text, userId: senderId, dateCreated: dateCreated, displayName: displayName)
+        return ChatMessage(documentId: documentId, text: text, userId: senderId, dateCreated: dateCreatedDate, displayName: displayName)
     }
 }
