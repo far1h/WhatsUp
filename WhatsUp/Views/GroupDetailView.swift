@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct GroupDetailView: View {
     
@@ -15,6 +16,14 @@ struct GroupDetailView: View {
     
     @State private var chatText: String = ""
     
+    private func sendMessage() async throws {
+        guard let currentUser = Auth.auth().currentUser else {
+            return
+        }
+        let message = ChatMessage(text: chatText, userId: currentUser.uid, dateCreated: Date(), displayName: currentUser.displayName ?? "Guest")
+        try await model.saveChatMessagesToFirestore(chatMessage: message, group: group)
+    }
+    
     var body: some View {
         VStack {
             Spacer()
@@ -23,11 +32,12 @@ struct GroupDetailView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 Button("Send") {
-                    model.saveChatMessagesToFirestore(text: chatText, group: group) { error in
-                        if let error = error {
-                            print("Error sending message: \(error.localizedDescription)")
-                        } else {
+                    Task {
+                        do {
+                            try await sendMessage()
                             chatText = ""
+                        } catch {
+                            print("Error sending message: \(error.localizedDescription)")
                         }
                     }
                 }
@@ -38,6 +48,7 @@ struct GroupDetailView: View {
 
 struct GroupDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        GroupDetailView(group: Group(subject: "Sample Group")).environmentObject(Model())
+        GroupDetailView(group: Group(subject: "Sample Group"))
+            .environmentObject(Model())
     }
 }

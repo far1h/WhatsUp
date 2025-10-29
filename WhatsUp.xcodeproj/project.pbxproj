@@ -27,6 +27,7 @@
 		91FAECDD2EB248BD00D9B44D /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECDC2EB248BD00D9B44D /* Group.swift */; };
 		91FAECDF2EB250FB00D9B44D /* GroupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECDE2EB250FB00D9B44D /* GroupListView.swift */; };
 		91FAECE12EB2548F00D9B44D /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECE02EB2548F00D9B44D /* GroupDetailView.swift */; };
+		91FAECE32EB25E6900D9B44D /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECE22EB25E6900D9B44D /* ChatMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		91FAECDC2EB248BD00D9B44D /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		91FAECDE2EB250FB00D9B44D /* GroupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListView.swift; sourceTree = "<group>"; };
 		91FAECE02EB2548F00D9B44D /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
+		91FAECE22EB25E6900D9B44D /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				91FAECD02EB239BE00D9B44D /* Model.swift */,
+				91FAECE22EB25E6900D9B44D /* ChatMessage.swift */,
 				91FAECD62EB23E4500D9B44D /* AppState.swift */,
 				91FAECDC2EB248BD00D9B44D /* Group.swift */,
 			);
@@ -225,6 +228,7 @@
 				91FAECD12EB239BE00D9B44D /* Model.swift in Sources */,
 				91FAECD72EB23E4500D9B44D /* AppState.swift in Sources */,
 				91FAECCE2EB2356900D9B44D /* String+Extensions.swift in Sources */,
+				91FAECE32EB25E6900D9B44D /* ChatMessage.swift in Sources */,
 				916F2E9C2EB1AD2A008F60F1 /* ContentView.swift in Sources */,
 				91FAECD92EB2424700D9B44D /* GroupListContainerView.swift in Sources */,
 				91FAECCB2EB2348300D9B44D /* SignUpView.swift in Sources */,

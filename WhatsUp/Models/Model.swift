@@ -27,18 +27,10 @@ class Model: ObservableObject {
         groups = snapshot.documents.compactMap { Group.fromSnapshot(snapshot: $0) }
     }
     
-    func saveChatMessagesToFirestore(text: String, group: Group, completion: @escaping(Error?) -> Void ) {
+    func saveChatMessagesToFirestore(chatMessage: ChatMessage, group: Group) async throws {
         let db = Firestore.firestore()
-        let messageData: [String: Any] = [
-            "text": text,
-            "timestamp": Timestamp(date: Date()),
-            "senderId": Auth.auth().currentUser?.uid ?? "unknown"
-        ]
-        db.collection("groups").document(group.documentId ?? "").collection("messages").addDocument(data: messageData) { error in
-            completion(error)
-        }
-        completion(nil)
-        
+        guard let groupId = group.documentId else { return }
+        try await db.collection("groups").document(groupId).collection("messages").addDocument(data: chatMessage.toDictionary())
     }
     
     func saveGroup(group: Group, completion: @escaping (Error?) -> Void) {
