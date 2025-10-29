@@ -25,6 +25,7 @@
 		91FAECD92EB2424700D9B44D /* GroupListContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECD82EB2424700D9B44D /* GroupListContainerView.swift */; };
 		91FAECDB2EB2434100D9B44D /* AddNewGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECDA2EB2434100D9B44D /* AddNewGroupView.swift */; };
 		91FAECDD2EB248BD00D9B44D /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECDC2EB248BD00D9B44D /* Group.swift */; };
+		91FAECDF2EB250FB00D9B44D /* GroupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECDE2EB250FB00D9B44D /* GroupListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		91FAECD82EB2424700D9B44D /* GroupListContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListContainerView.swift; sourceTree = "<group>"; };
 		91FAECDA2EB2434100D9B44D /* AddNewGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGroupView.swift; sourceTree = "<group>"; };
 		91FAECDC2EB248BD00D9B44D /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		91FAECDE2EB250FB00D9B44D /* GroupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				91FAECD42EB23D5400D9B44D /* MainView.swift */,
 				91FAECD82EB2424700D9B44D /* GroupListContainerView.swift */,
 				91FAECDA2EB2434100D9B44D /* AddNewGroupView.swift */,
+				91FAECDE2EB250FB00D9B44D /* GroupListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				916F2E9C2EB1AD2A008F60F1 /* ContentView.swift in Sources */,
 				91FAECD92EB2424700D9B44D /* GroupListContainerView.swift in Sources */,
 				91FAECCB2EB2348300D9B44D /* SignUpView.swift in Sources */,
+				91FAECDF2EB250FB00D9B44D /* GroupListView.swift in Sources */,
 				916F2E9A2EB1AD2A008F60F1 /* WhatsUpApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

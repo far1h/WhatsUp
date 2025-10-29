@@ -47,7 +47,7 @@ struct AddNewGroupView: View {
                     Text("New Group")
                         .font(.headline)
                 }
-        }
+            }
         }
     }
 }

@@ -21,6 +21,12 @@ class Model: ObservableObject {
         try await changeRequest.commitChanges()
     }
     
+    func populateGroups() async throws {
+        let db = Firestore.firestore()
+        let snapshot = try await db.collection("groups").getDocuments()
+        groups = snapshot.documents.compactMap { Group.fromSnapshot(snapshot: $0) }
+    }
+    
     func saveGroup(group: Group, completion: @escaping (Error?) -> Void) {
         let db = Firestore.firestore()
         let docRef = db.collection("groups").addDocument(data: group.toDictionary()) { error in

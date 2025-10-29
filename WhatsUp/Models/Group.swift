@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 struct Group: Identifiable, Hashable, Codable {
     var documentId: String? = nil
@@ -21,5 +23,15 @@ extension Group {
         return [
             "subject": subject
         ]
+    }
+    
+    static func fromSnapshot(snapshot: QueryDocumentSnapshot) -> Group? {
+        let data = snapshot.data()
+        guard let subject = data["subject"] as? String else {
+            return nil
+        }
+        let documentId = snapshot.documentID
+        
+        return Group(documentId: documentId, subject: subject)
     }
 }

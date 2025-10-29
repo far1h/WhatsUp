@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GroupListContainerView: View {
-    
+    @EnvironmentObject var model: Model
     @State private var isPresented: Bool = false
     var body: some View {
         VStack {
@@ -19,18 +19,27 @@ struct GroupListContainerView: View {
                 }) {
                     Image(systemName: "plus")
                         .font(.title)
+                        .padding(.bottom, 8)
                 }
             }
+            GroupListView(groups: model.groups)
             Spacer()
         }.padding()
             .sheet(isPresented: $isPresented) {
                 AddNewGroupView()
+            }
+            .task {
+                do {
+                    try await model.populateGroups()
+                } catch {
+                    print("Error fetching groups: \(error.localizedDescription)")
+                }
             }
     }
 }
 
 struct GroupListContainerView_Previews: PreviewProvider {
     static var previews: some View {
-        GroupListContainerView()
+        GroupListContainerView().environmentObject(Model())
     }
 }
