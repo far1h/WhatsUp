@@ -24,6 +24,7 @@
 		91FAECD72EB23E4500D9B44D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECD62EB23E4500D9B44D /* AppState.swift */; };
 		91FAECD92EB2424700D9B44D /* GroupListContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECD82EB2424700D9B44D /* GroupListContainerView.swift */; };
 		91FAECDB2EB2434100D9B44D /* AddNewGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECDA2EB2434100D9B44D /* AddNewGroupView.swift */; };
+		91FAECDD2EB248BD00D9B44D /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECDC2EB248BD00D9B44D /* Group.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		91FAECD62EB23E4500D9B44D /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		91FAECD82EB2424700D9B44D /* GroupListContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListContainerView.swift; sourceTree = "<group>"; };
 		91FAECDA2EB2434100D9B44D /* AddNewGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGroupView.swift; sourceTree = "<group>"; };
+		91FAECDC2EB248BD00D9B44D /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			children = (
 				91FAECD02EB239BE00D9B44D /* Model.swift */,
 				91FAECD62EB23E4500D9B44D /* AppState.swift */,
+				91FAECDC2EB248BD00D9B44D /* Group.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91FAECDD2EB248BD00D9B44D /* Group.swift in Sources */,
 				91FAECD32EB23B0E00D9B44D /* LoginView.swift in Sources */,
 				91FAECDB2EB2434100D9B44D /* AddNewGroupView.swift in Sources */,
 				91FAECD52EB23D5400D9B44D /* MainView.swift in Sources */,
