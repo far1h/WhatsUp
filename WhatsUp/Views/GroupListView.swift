@@ -11,17 +11,16 @@ struct GroupListView: View {
     
     let groups: [Group]
     var body: some View {
-        List(groups) { group in
-            NavigationLink {
-//                GroupDetailView(group: group)
-                Text("Group Detail View for \(group.subject)")
-            } label: {
-                HStack {
-                    Image(systemName: "person.3.fill")
-                    Text(group.subject)
+        List{
+            ForEach(groups) { group in
+                NavigationLink(destination: GroupDetailView(group: group)) {
+                    HStack {
+                        Image(systemName: "person.3.fill")
+                        Text(group.subject)
+                        Spacer()
+                    }
                 }
             }
-
         }.listStyle(.plain)
     }
 }
