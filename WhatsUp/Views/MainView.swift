@@ -6,15 +6,28 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct MainView: View {
+    
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
         TabView {
             GroupListContainerView()
                 .tabItem {
                     Label("Chats", systemImage: "message.fill")
                 }
-            Text("Settings View")
+            Button(action: {
+                do {
+                    try Auth.auth().signOut()
+                    dismiss()
+                } catch {
+                    print("Error signing out: \(error.localizedDescription)")
+                }
+            }, label: {
+                Text("Sign Out")
+            })
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }

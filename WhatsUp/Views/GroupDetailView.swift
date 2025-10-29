@@ -26,7 +26,16 @@ struct GroupDetailView: View {
     
     var body: some View {
         VStack {
-            ChatMessageListView(messages: model.chatMessages)
+            ScrollViewReader { scrollViewProxy in
+                ChatMessageListView(messages: model.chatMessages)
+                    .onChange(of: model.chatMessages.count) { _ in
+                        if let lastMessage = model.chatMessages.last {
+                            withAnimation {
+                                scrollViewProxy.scrollTo(lastMessage.id, anchor: .bottom)
+                            }
+                        }
+                    }
+            }
             Spacer()
             HStack {
                 TextField("Type a message...", text: $chatText)
@@ -42,8 +51,9 @@ struct GroupDetailView: View {
                         }
                     }
                 }
-            }
-        }.padding()
+                
+            }.padding()
+        }
             .onDisappear {
                 model.detachListener()
             }

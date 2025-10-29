@@ -6,26 +6,37 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ChatMessageListView: View {
     
     let messages: [ChatMessage]
     
-    var body: some View {
-        List {
-            ForEach(messages) { message in
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text(message.displayName)
-                            .font(.headline)
-                        Text(message.text)
-                            .font(.body)
-                    }
-                    Spacer()
-                }
-                .padding(8)
-            }
+    private func isFromCurrentUser(_ message: ChatMessage) -> (ChatMessageType, Color) {
+        if message.userId == Auth.auth().currentUser?.uid {
+            return (.sent, .blue)
+        } else {
+            return (.received, .black.opacity(0.8))
         }
+    }
+    
+    var body: some View {
+        
+        ScrollView {
+            VStack {
+                ForEach (messages) { message in
+                    let (direction, color) = isFromCurrentUser(message)
+                    HStack {
+                        ChatMessageView(message: message, direction: direction, color: color)
+                    }.listRowSeparator(.hidden)
+                    Spacer().frame(height: 5)
+                        .id(message.id)
+                }.listStyle(PlainListStyle())
+            }
+            .padding()
+            .padding(.bottom, 50)
+        }
+        
     }
 }
 
