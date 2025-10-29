@@ -18,6 +18,7 @@
 		916F2EB12EB1B30C008F60F1 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 916F2EB02EB1B30C008F60F1 /* FirebaseStorage */; };
 		91FAECCB2EB2348300D9B44D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECCA2EB2348300D9B44D /* SignUpView.swift */; };
 		91FAECCE2EB2356900D9B44D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECCD2EB2356900D9B44D /* String+Extensions.swift */; };
+		91FAECD12EB239BE00D9B44D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FAECD02EB239BE00D9B44D /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		91FAECC82EB233BF00D9B44D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		91FAECCA2EB2348300D9B44D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		91FAECCD2EB2356900D9B44D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		91FAECD02EB239BE00D9B44D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		916F2E982EB1AD2A008F60F1 /* WhatsUp */ = {
 			isa = PBXGroup;
 			children = (
+				91FAECCF2EB239B600D9B44D /* Models */,
 				91FAECCC2EB2355E00D9B44D /* Extensions */,
 				91FAECC92EB2347800D9B44D /* Views */,
 				916F2E992EB1AD2A008F60F1 /* WhatsUpApp.swift */,
@@ -100,6 +103,14 @@
 				91FAECCD2EB2356900D9B44D /* String+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		91FAECCF2EB239B600D9B44D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				91FAECD02EB239BE00D9B44D /* Model.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91FAECD12EB239BE00D9B44D /* Model.swift in Sources */,
 				91FAECCE2EB2356900D9B44D /* String+Extensions.swift in Sources */,
 				916F2E9C2EB1AD2A008F60F1 /* ContentView.swift in Sources */,
 				91FAECCB2EB2348300D9B44D /* SignUpView.swift in Sources */,
