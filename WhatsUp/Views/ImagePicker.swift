@@ -8,6 +8,21 @@
 import SwiftUI
 import UIKit
 
+extension UIImagePickerController.SourceType: Identifiable {
+    public var id: Int {
+        switch self {
+        case .camera:
+            return 0
+        case .photoLibrary:
+            return 1
+        case .savedPhotosAlbum:
+            return 2
+        @unknown default:
+            return -1
+        }
+    }
+}
+
 struct ImagePicker: UIViewControllerRepresentable {
     
     var sourceType: UIImagePickerController.SourceType = .camera

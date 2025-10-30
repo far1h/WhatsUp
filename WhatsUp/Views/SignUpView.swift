@@ -19,7 +19,7 @@ struct SignUpView: View {
     @EnvironmentObject private var model: Model
     
     private var isFormValid: Bool {
-        return !email.isEmptyOrWhiteSpace && !password.isEmptyOrWhiteSpace && !displayName.isEmptyOrWhiteSpace
+        return !email.isEmptyOrWhiteSpace && !password.isEmptyOrWhiteSpace
     }
 
     private func signUp() async {

@@ -50,7 +50,10 @@ struct SettingsView: View {
             }, label: {
                 Text("Sign Out")
             })
-        }.padding()
+        }.sheet(item: $config.sourceTypes) { sourceType in
+            ImagePicker(sourceType: sourceType, selectedImage: $config.selectedImage)
+        }
+        .padding()
             .onAppear {
                 if let currentUser = Auth.auth().currentUser {
                     config.displayedName = currentUser.displayName ?? "Guest "
