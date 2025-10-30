@@ -52,7 +52,7 @@ struct GroupDetailView: View {
                     }
                 } label: {
                     Image(systemName: "paperplane.fill")
-                        .foregroundColor(chatText.isEmptyOrWhiteSpace ? .gray : .blue)
+                        .foregroundColor(chatText.isEmptyOrWhiteSpace ? .black.opacity(0.8) : .blue)
                 }.disabled(chatText.isEmptyOrWhiteSpace)
                 
             }.padding()
