@@ -23,6 +23,44 @@ struct ChatMessage: Identifiable, Codable, Hashable, Equatable {
 
 extension ChatMessage {
 
+    // convert messages to gemini body format
+    /*
+         curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent" \
+         -H "x-goog-api-key: $GEMINI_API_KEY" \
+         -H 'Content-Type: application/json' \
+         -X POST \
+         -d '{
+         "contents": [
+         {
+         "role": "user",
+         "parts": [
+         { "text": "Hello." }
+         ]
+         },
+         {
+         "role": "model",
+         "parts": [
+         { "text": "Hello! How can I help you today?" }
+         ]
+         },
+         {
+         "role": "user",
+         "parts": [
+         { "text": "Please write a four-line poem about the ocean." }
+         ]
+         }
+         ]
+         }'
+         */
+    
+    func toGeminiContentPart() -> [String: Any] {
+        return [
+            "role": "user",
+            "parts": [
+                ["text": text]
+            ]
+        ]
+    }
     
     func toDictionary() -> [String: Any] {
         return [

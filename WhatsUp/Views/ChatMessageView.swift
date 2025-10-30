@@ -5,6 +5,7 @@
 //  Created by Farih Muhammad on 29/10/2025.
 //
 
+import MarkdownUI
 import SwiftUI
 
 enum ChatMessageType {
@@ -32,8 +33,9 @@ struct ChatMessageView: View {
                 Text(message.displayName)
                     .opacity(0.8)
                     .font(.caption)
-                Text(message.text)
+                Markdown(message.text)
                     .padding(.bottom, 10)
+                    .colorScheme(.dark)
                     .frame(minWidth: 50, alignment: .leading)
             }.padding(8)
                 .background(color)

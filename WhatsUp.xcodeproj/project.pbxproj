@@ -10,6 +10,8 @@
 		910CD1372EB1C9BE009E030B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 910CD1362EB1C9BE009E030B /* GoogleService-Info.plist */; };
 		913AEEB32EB2E3E000CFCE89 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AEEB22EB2E3E000CFCE89 /* SettingsView.swift */; };
 		913AEEB52EB2E67400CFCE89 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AEEB42EB2E67400CFCE89 /* ImagePicker.swift */; };
+		913AEEB72EB2F64A00CFCE89 /* GeminiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AEEB62EB2F64A00CFCE89 /* GeminiService.swift */; };
+		913AEEBA2EB2FA7600CFCE89 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 913AEEB92EB2FA7600CFCE89 /* MarkdownUI */; };
 		916F2E9A2EB1AD2A008F60F1 /* WhatsUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916F2E992EB1AD2A008F60F1 /* WhatsUpApp.swift */; };
 		916F2E9C2EB1AD2A008F60F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916F2E9B2EB1AD2A008F60F1 /* ContentView.swift */; };
 		916F2E9E2EB1AD2B008F60F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 916F2E9D2EB1AD2B008F60F1 /* Assets.xcassets */; };
@@ -38,6 +40,7 @@
 		910CD1362EB1C9BE009E030B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		913AEEB22EB2E3E000CFCE89 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		913AEEB42EB2E67400CFCE89 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		913AEEB62EB2F64A00CFCE89 /* GeminiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiService.swift; sourceTree = "<group>"; };
 		916F2E962EB1AD2A008F60F1 /* WhatsUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		916F2E992EB1AD2A008F60F1 /* WhatsUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsUpApp.swift; sourceTree = "<group>"; };
 		916F2E9B2EB1AD2A008F60F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 				916F2EB12EB1B30C008F60F1 /* FirebaseStorage in Frameworks */,
 				916F2EAD2EB1B30C008F60F1 /* FirebaseFirestore in Frameworks */,
 				916F2EAF2EB1B30C008F60F1 /* FirebaseFirestoreSwift in Frameworks */,
+				913AEEBA2EB2FA7600CFCE89 /* MarkdownUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +133,7 @@
 				91FAECE62EB26D0E00D9B44D /* ChatMessageView.swift */,
 				913AEEB22EB2E3E000CFCE89 /* SettingsView.swift */,
 				913AEEB42EB2E67400CFCE89 /* ImagePicker.swift */,
+				913AEEB62EB2F64A00CFCE89 /* GeminiService.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 				916F2EAC2EB1B30C008F60F1 /* FirebaseFirestore */,
 				916F2EAE2EB1B30C008F60F1 /* FirebaseFirestoreSwift */,
 				916F2EB02EB1B30C008F60F1 /* FirebaseStorage */,
+				913AEEB92EB2FA7600CFCE89 /* MarkdownUI */,
 			);
 			productName = WhatsUp;
 			productReference = 916F2E962EB1AD2A008F60F1 /* WhatsUp.app */;
@@ -205,6 +211,7 @@
 			packageReferences = (
 				916F2EA92EB1B30C008F60F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				910CD12F2EB1C8F8009E030B /* XCRemoteSwiftPackageReference "deprecated-generative-ai-swift" */,
+				913AEEB82EB2FA7600CFCE89 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
 			);
 			productRefGroup = 916F2E972EB1AD2A008F60F1 /* Products */;
 			projectDirPath = "";
@@ -242,6 +249,7 @@
 				913AEEB32EB2E3E000CFCE89 /* SettingsView.swift in Sources */,
 				91FAECD52EB23D5400D9B44D /* MainView.swift in Sources */,
 				91FAECD12EB239BE00D9B44D /* Model.swift in Sources */,
+				913AEEB72EB2F64A00CFCE89 /* GeminiService.swift in Sources */,
 				91FAECD72EB23E4500D9B44D /* AppState.swift in Sources */,
 				91FAECCE2EB2356900D9B44D /* String+Extensions.swift in Sources */,
 				91FAECE32EB25E6900D9B44D /* ChatMessage.swift in Sources */,
@@ -461,6 +469,14 @@
 				minimumVersion = 0.5.6;
 			};
 		};
+		913AEEB82EB2FA7600CFCE89 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		916F2EA92EB1B30C008F60F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -472,6 +488,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		913AEEB92EB2FA7600CFCE89 /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 913AEEB82EB2FA7600CFCE89 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
+			productName = MarkdownUI;
+		};
 		916F2EAA2EB1B30C008F60F1 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 916F2EA92EB1B30C008F60F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
