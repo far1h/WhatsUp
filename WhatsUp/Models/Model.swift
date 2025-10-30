@@ -18,10 +18,25 @@ class Model: ObservableObject {
     
     var fireStoreListener: ListenerRegistration? = nil
     
+    private func updateUserInfoForAllMessages(for user: User) async throws {
+        let db = Firestore.firestore()
+        let groupsSnapshot = try await db.collection("groups").getDocuments()
+        for groupDoc in groupsSnapshot.documents {
+            let groupId = groupDoc.documentID
+            let messagesSnapshot = try await db.collection("groups").document(groupId).collection("messages").whereField("senderId", isEqualTo: user.uid).getDocuments()
+            for messageDoc in messagesSnapshot.documents {
+                try await messageDoc.reference.updateData([
+                    "displayName": user.displayName ?? ""
+                ])
+            }
+        }
+    }
+    
     func updateDisplayName(for user: User, to newName: String) async throws {
         let changeRequest = user.createProfileChangeRequest()
         changeRequest.displayName = newName
         try await changeRequest.commitChanges()
+        try await updateUserInfoForAllMessages(for: user)
     }
     
     func populateGroups() async throws {

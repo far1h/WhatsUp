@@ -16,6 +16,7 @@ struct SettingsConfig {
 
 struct SettingsView: View {
     
+    @EnvironmentObject var model: Model
     @State private var config = SettingsConfig()
     @FocusState var isTextFieldFocused: Bool
     
@@ -40,6 +41,20 @@ struct SettingsView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .focused($isTextFieldFocused)
                 .textInputAutocapitalization(.never)
+                .onSubmit {
+                    guard let currentUser = Auth.auth().currentUser else {
+                        return
+                    }
+                    Task {
+                        do {
+                            try await model.updateDisplayName(for: currentUser, to: config.displayedName)
+                            isTextFieldFocused = false
+                        } catch {
+                            print("Error updating display name: \(error.localizedDescription)")
+                        }
+                    }
+                }
+            
             Spacer()
             Button(action: {
                 do {
@@ -61,16 +76,16 @@ struct SettingsView: View {
             
         }
         .padding()
-            .onAppear {
-                if let currentUser = Auth.auth().currentUser {
-                    config.displayedName = currentUser.displayName ?? "Guest "
-                }
+        .onAppear {
+            if let currentUser = Auth.auth().currentUser {
+                config.displayedName = currentUser.displayName ?? "Guest "
             }
+        }
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView().environmentObject(Model())
     }
 }

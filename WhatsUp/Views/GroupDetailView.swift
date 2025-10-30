@@ -41,7 +41,7 @@ struct GroupDetailView: View {
                 TextField("Type a message...", text: $chatText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
-                Button("Send") {
+                Button {
                     Task {
                         do {
                             try await sendMessage()
@@ -50,6 +50,9 @@ struct GroupDetailView: View {
                             print("Error sending message: \(error.localizedDescription)")
                         }
                     }
+                } label: {
+                    Image(systemName: "paperplane.fill")
+                        .foregroundColor(chatText.isEmptyOrWhiteSpace ? .gray : .blue)
                 }.disabled(chatText.isEmptyOrWhiteSpace)
                 
             }.padding()
