@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		910CD1372EB1C9BE009E030B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 910CD1362EB1C9BE009E030B /* GoogleService-Info.plist */; };
 		913AEEB32EB2E3E000CFCE89 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AEEB22EB2E3E000CFCE89 /* SettingsView.swift */; };
+		913AEEB52EB2E67400CFCE89 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AEEB42EB2E67400CFCE89 /* ImagePicker.swift */; };
 		916F2E9A2EB1AD2A008F60F1 /* WhatsUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916F2E992EB1AD2A008F60F1 /* WhatsUpApp.swift */; };
 		916F2E9C2EB1AD2A008F60F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916F2E9B2EB1AD2A008F60F1 /* ContentView.swift */; };
 		916F2E9E2EB1AD2B008F60F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 916F2E9D2EB1AD2B008F60F1 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		910CD1362EB1C9BE009E030B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		913AEEB22EB2E3E000CFCE89 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		913AEEB42EB2E67400CFCE89 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		916F2E962EB1AD2A008F60F1 /* WhatsUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		916F2E992EB1AD2A008F60F1 /* WhatsUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsUpApp.swift; sourceTree = "<group>"; };
 		916F2E9B2EB1AD2A008F60F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				91FAECE42EB2649F00D9B44D /* ChatMessageListView.swift */,
 				91FAECE62EB26D0E00D9B44D /* ChatMessageView.swift */,
 				913AEEB22EB2E3E000CFCE89 /* SettingsView.swift */,
+				913AEEB42EB2E67400CFCE89 /* ImagePicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				91FAECE72EB26D0E00D9B44D /* ChatMessageView.swift in Sources */,
 				91FAECDD2EB248BD00D9B44D /* Group.swift in Sources */,
 				91FAECE52EB2649F00D9B44D /* ChatMessageListView.swift in Sources */,
+				913AEEB52EB2E67400CFCE89 /* ImagePicker.swift in Sources */,
 				91FAECD32EB23B0E00D9B44D /* LoginView.swift in Sources */,
 				91FAECDB2EB2434100D9B44D /* AddNewGroupView.swift in Sources */,
 				913AEEB32EB2E3E000CFCE89 /* SettingsView.swift in Sources */,
