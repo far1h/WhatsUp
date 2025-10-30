@@ -53,6 +53,13 @@ struct SettingsView: View {
         }.sheet(item: $config.sourceTypes) { sourceType in
             ImagePicker(sourceType: sourceType, selectedImage: $config.selectedImage)
         }
+        .onChange(of: config.selectedImage) { newImage in
+            guard let image = newImage,
+                  let imageData = image.jpegData(compressionQuality: 0.8) else {
+                return
+            }
+            
+        }
         .padding()
             .onAppear {
                 if let currentUser = Auth.auth().currentUser {
