@@ -50,7 +50,7 @@ struct GroupDetailView: View {
                             print("Error sending message: \(error.localizedDescription)")
                         }
                     }
-                }
+                }.disabled(chatText.isEmptyOrWhiteSpace)
                 
             }.padding()
         }
